@@ -1,0 +1,49 @@
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Seven-segment display</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            height: 100vh;
+            width: 100vw;
+        }
+
+        .canvas-wrapper{
+            display: grid;
+            place-content: center;
+        }
+
+        canvas {
+            background-color: #000;
+        }
+
+        .time-format{
+            display:flex;
+            justify-content: center;
+            padding: 15px 0;
+            margin-bottom: 15px;
+        }
+    </style>
+</head>
+<body>
+    <div class="time-format">
+        <label for="timeFormat">Time Format: </label>
+        <select name="timeFormat" id="timeFormat">
+            <option value="24">24 hrs</option>
+            <option value="12">12 hrs</option>
+        </select>
+    </div>
+    <div class="canvas-wrapper">
+        <canvas id="canvas" width="1400px" height="400px"></canvas>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
